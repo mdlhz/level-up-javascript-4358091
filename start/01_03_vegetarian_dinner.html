@@ -34,7 +34,15 @@
       }
     ]
     // Write your code here
-
+    const vegetarianMenu = menu.filter((dish) => dish.isVegetarian);
+    const domMenu = document.getElementById('menu');
+    vegetarianMenu.map(dish => {
+      const li = domMenu.appendChild(
+        document.createElement("li")
+      );
+      li.textContent = dish.name;
+      return li;
+    });
   </script>
 </body>
 
